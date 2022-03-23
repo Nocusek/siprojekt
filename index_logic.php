@@ -97,7 +97,7 @@ if (isset($_SESSION['user_email'])) {
   $displayLogOut = '';
   $displayBasket = "display: block";
   $displayMain = "display: none";
-  $displayPromocja = ''; // Pokazanie promocji po zalogowaniu
+  $displayPromocja = "display: none";
   $displayOrders = '';
   if (isset($_SESSION['user_permission'])) {
     if ($_SESSION['user_permission'] == "admin") {
