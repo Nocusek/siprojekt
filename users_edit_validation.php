@@ -59,8 +59,8 @@ if (isset($_POST['email'])) {
     $city = "";
   } else {
     $_SESSION['eu_city'] = $city; // do formularza rejestracji jako value
-    $cityQuery = "`city`='$city', ";
   }
+  $cityQuery = "`city`='$city', ";
 
   $name = $_POST['name'];
   if ($name != "") {
@@ -73,9 +73,9 @@ if (isset($_POST['email'])) {
       $_SESSION['ve_name'] = 'is-invalid';
     } else {
       $_SESSION['ve_name'] = 'is-valid';
-      $nameQuery = "`name`='$name', ";
     }
   }
+  $nameQuery = "`name`='$name', ";
 
   $address = $_POST['address'];
   if ($address != "") {
@@ -85,9 +85,9 @@ if (isset($_POST['email'])) {
       $_SESSION['ve_address'] = 'is-invalid';
     } else {
       $_SESSION['ve_address'] = 'is-valid';
-      $addressQuery = "`address`='$address', ";
     }
   }
+  $addressQuery = "`address`='$address', ";
 
   $phone = trim($_POST['phone']);
   if ($phone != "") {
@@ -97,9 +97,9 @@ if (isset($_POST['email'])) {
       $_SESSION['ve_phone'] = 'is-invalid';
     } else {
       $_SESSION['ve_phone'] = 'is-valid';
-      $phoneQuery = "`phone`='$phone', ";
     }
   }
+  $phoneQuery = "`phone`='$phone', ";
 
 
   if (isset($_POST['permission'])) {

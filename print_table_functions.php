@@ -1,11 +1,11 @@
 <html>
 
 <head>
-    <style>
+    <!-- <style>
         table :hover {
             background-color: RGBA(243, 111, 39, 0.2) !important;
         }
-    </style>
+    </style> -->
 </head>
 
 </html>
@@ -49,7 +49,7 @@ function printTable($dataArr, $countArr, $detailsSth, $retPath = "", $button1Vis
     $prevOrderId = -1;
     $orderPriceSum = 0;
     $currentOrderElement = 1; // Do wyświetlenia podsumowania zamówienia
-    echo '<table class="center table " style="width: 80%; margin-left:auto; margin-right:auto">
+    echo '<table class="center table" style="width: 80%; margin-left:auto; margin-right:auto">
             <tr>
                 <th class="tableUnderline">Produkt</th>
                 <th class="tableUnderline">Ilość</th>

@@ -137,6 +137,8 @@ if (isset($_SESSION['user_permission']) && $_SESSION['user_permission'] == "admi
         printTable($arrData, $arrCount, $sthDetails, "users_orders.php", true, "Zrealizowano", true, "Anulowano");
         // Zamówienia w trakcie realizacji koniec
 
+        echo "<br> <br>";
+
         // Zamówienia zrealizowane
         $queryProducts = generateProductsQuery(" WHERE o.idUser = $id AND od.Status = 'Zrealizowano' ");
         try {
@@ -161,6 +163,8 @@ if (isset($_SESSION['user_permission']) && $_SESSION['user_permission'] == "admi
 
         printTable($arrData, $arrCount, $sthDetails);
         // Zamówienia zrealizowane koniec
+
+        echo "<br> <br>";
 
         // Zamówienia anulowane
         $queryProducts = generateProductsQuery(" WHERE o.idUser = $id AND od.Status = 'Anulowano' ");
@@ -187,7 +191,7 @@ if (isset($_SESSION['user_permission']) && $_SESSION['user_permission'] == "admi
         printTable($arrData, $arrCount, $sthDetails);
         // Zamówienia anulowane koniec
 
-
+        echo "<br> <br>";
     } else {
         header("Location: $pHome");
     }
