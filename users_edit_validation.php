@@ -37,6 +37,7 @@ if (isset($_POST['email'])) {
     } else {
       if ($password != "") {
         $_SESSION['ve_password2'] = 'is-valid';
+        $password = sha1($password);
         $passwordQuery = ", `password`='$password'";
       }
     }
